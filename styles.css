@@ -309,6 +309,7 @@ figcaption {
         width: 100vw;
         height: 100vh;
         top: -100vh;
+        overflow: hidden;
     }
 
     .nav-main {
@@ -398,56 +399,46 @@ figcaption {
     grid-template-rows: 1fr;
 }
 
-#content-Design .title-section {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-#content-Design .text-section {
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-
-#content-Design .img-section {
-    grid-column: 2/4;
-    grid-row: 2/3;
-}
-
-#content-Photo .title-section {
-    grid-column: 3/4;
-    grid-row: 1/2;
-}
-
-#content-Photo .text-section {
-    grid-column: 2/3;
-    grid-row: 1/2;
-}
-
-#content-Photo .img-section {
-    grid-column: 2/4;
-    grid-row: 2/3;
-}
-
-
+#content-Design .title-section,
 #content-Art .title-section {
     grid-column: 2/3;
     grid-row: 1/2;
+    padding: 2rem;
 }
 
+#content-Photo .title-section,
+#content-About .title-section {
+    grid-column: 3/4;
+    grid-row: 1/2;
+    padding: 2rem;
+}
+
+#content-Design .text-section,
 #content-Art .text-section {
     grid-column: 3/4;
     grid-row: 1/2;
+    padding: 2rem;
 }
+
+#content-Photo .text-section,
+#content-About .text-section{
+    grid-column: 2/3;
+    grid-row: 1/2;
+    padding: 2rem;
+}
+
+
+#content-Design .img-section,
+#content-Photo .img-section{
+    grid-column: 2/4;
+    grid-row: 2/3;
+}
+
+
 
 #content-Art .img-section {
     grid-column: 2/4;
     grid-row: 2/3;
-}
-
-#content-About .title-section {
-    grid-column: 3/4;
-    grid-row: 1/2;
-
 }
 
 #content-About .img-section {
@@ -493,7 +484,6 @@ figcaption {
 }
 
 @media(max-width: 1280px) {
-
     #content-Design,
     #content-Photo,
     #content-Art,
@@ -504,6 +494,20 @@ figcaption {
 
     .title-section blockquote {
         width: 100%;
+    }
+
+    #content-Design .title-section,
+    #content-Art .title-section,   
+    #content-Photo .title-section,
+    #content-About .title-section {
+        padding: .5rem;
+    }
+    
+    #content-Design .text-section,
+    #content-Art .text-section,    
+    #content-Photo .text-section,
+    #content-About .text-section{
+        padding: .5rem;
     }
 
     .gallery {
