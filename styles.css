@@ -147,7 +147,6 @@ figcaption {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-direction: row;
     color: #080808;
     z-index: 3;
     padding: 0em 2em;
