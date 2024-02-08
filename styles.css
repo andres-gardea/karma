@@ -213,14 +213,15 @@ figcaption {
 .nav-container {
     position: fixed;
     width: 100vw;
-    height: 40vh;
+    height: 100vh;
     left: 0;
-    top: -40vh;
+    top: -101vh;
     color: #fff;
     background: #080808;
     display: grid;
     grid-template-rows: 6vh 1fr 6vh;
     z-index: 2;
+    overflow: hidden;
 }
 
 .logo-text {
@@ -314,7 +315,6 @@ figcaption {
         width: 100vw;
         height: 100vh;
         top: -100vh;
-        overflow: hidden;
     }
 
     .nav-main {
@@ -351,6 +351,7 @@ figcaption {
 #Contenido {
     min-height: 180vh;
     width: 100%;
+    opacity: 0;
 }
 
 #Design,

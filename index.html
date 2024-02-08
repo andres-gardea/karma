@@ -5,7 +5,7 @@
     <title>Karma</title>
 
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
     <meta name="author" content="Andrés Roberto Gardea Jiménez">
     <meta name="description" content="Somos un Colectivo Artistico/Creativo de la ciudad de Chihuahua que busca darle a concer 
         la cultura local por medio del Diseñadores y diferentes diciplinas de las artes graficas.">
@@ -57,9 +57,6 @@
                         <a href="https://www.instagram.com/andres.gardea/">Instagram</a>
                     </div>
                     <div class="nav-socials">
-                        <a href="http://chihuahuamx.com/" target="_blank">ChihuahuaMx</a>
-                    </div>
-                    <div class="nav-socials">
                         <a href="https://unfotografomascuu.com/">unfotografomascuu</a>
                     </div>
                 </div>
@@ -79,7 +76,7 @@
                 </div>
             </div>
             <div class="nav-footer">
-                <a href="https://www.instagram.com/andres.gardea/">Pagina hecha por <b>Andres Gardea</b>.</a>
+                <a href="https://andresgardea.github.io/page/">Pagina hecha por <b>Andres Gardea</b>.</a>
             </div>
         </div>
     </header>
@@ -89,8 +86,8 @@
         <section id="Design">
             <div class="section-content" id="content-Design">
                 <div class="title-section">
-                    <h1>Sómos... Diseñadores</h1>
-                    <blockquote>Los Diseñadores Gráficos somós profesionales creativos que utilizamos el arte y la
+                    <h1>Somos... Diseñadores</h1>
+                    <blockquote>Los Diseñadores Gráficos somos profesionales creativos que utilizamos el arte y la
                         tecnología para comunicar ideas visuales.</blockquote>
                 </div>
                 <div class="text-section">
@@ -116,6 +113,10 @@
                             <img src="Media/Cacrtel-2.webp" alt="Cosas de Diseñador">
                         </figure>
                         <figure class="gallery-img">
+                            <img src="Media/Cartel-9.webp"
+                                alt="">
+                        </figure>
+                        <figure class="gallery-img">
                             <img src="Media/Cartel-3.webp"
                                 alt="Cartel acerca del cuidado del Agua diseñado por Andres Gardea">
                         </figure>
@@ -129,6 +130,10 @@
                         </figure>
                         <figure class="gallery-img">
                             <img src="Media/Cartel-7.webp" alt="">
+                        </figure>
+                        <figure class="gallery-img">
+                            <img src="Media/Cartel-8.webp"
+                                alt="Cartel acerca del Colibrí Rufo hecho por Andres Gardea">
                         </figure>
                     </div>
                 </div>
@@ -251,7 +256,7 @@
                 </div>
                 <div class="img-section">
                     <figure class="img-container">
-                        <img src="Media/Region.webp" alt="Imagen Satelital de la Region.">
+                        <img src="Media/Region.webp" alt="Imagen Satelital de la Region de Chihuahua.">
                     </figure>
                 </div>
         </section>
@@ -341,6 +346,12 @@
             delay: 5.5
         });
 
+        gsap.to("#Contenido", {
+            duration: 1,
+            opacity: 1,
+            delay: 5.65
+        });
+
         /*Animaciones del Nav*/
         const tl = gsap.timeline({ paused: true });
 
@@ -350,7 +361,7 @@
             const animateOpenNav = () => {
 
                 tl.to(".nav-container", 0.8, {
-                    y: '40vh',
+                    y: '101vh',
                     ease: "power4.inOut",
                     autoAlpha: 1,
                     delay: 0.1,
