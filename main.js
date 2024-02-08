@@ -149,6 +149,13 @@ document.addEventListener("DOMContentLoaded", function () {
             zIndex: -10,
             delay: 4,
         });
+
+        gsap.to(".nav-bar", {
+            top: "0",
+            ease: "power3.inOut",
+            duration: 2,
+            delay: 2.1,
+          });
     });
 });
 
