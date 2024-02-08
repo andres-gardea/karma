@@ -255,6 +255,7 @@ img {
     .loader-text {
         grid-column: 2/3;
         grid-row: 2/3;
+        gap: 0.8rem;
     }
 
     .loader-info {
@@ -274,8 +275,7 @@ img {
 
     .col:nth-child(2) .loader-text-container-2 {
         font-size: 18px;
-        text-align: right;
-        color: gray;
+        text-align: center;
     }
 }
 
@@ -623,6 +623,11 @@ img {
 
 @media(max-width: 600px) {
 
+    #About {
+        grid-template-columns: 3vw 1fr 3vw;
+        margin-bottom: 2rem;
+    }
+
     #content-Design,
     #content-Photo,
     #content-Art,
@@ -669,8 +674,9 @@ img {
         overflow: hidden;
     }
 
-    #About {
-        grid-template-columns: 3vw 1fr 3vw;
-        margin-bottom: 2rem;
+    .gallery-img:hover img,
+    .img-container:hover img {
+        transform: scale(1.05);
     }
+
 }
