@@ -171,8 +171,8 @@ const animateOpenNav = () => {
         delay: 0.1,
     });
 
-    tl.to(".nav-bar", 0.2, {
-        backgroundColor: "var(--background-2)",
+    tl.to(".nav-bar", 0, {
+        backgroundColor: "#ffffff00",
         delay: -0.6,
     });
 

@@ -388,6 +388,7 @@ img {
 
 .nav-logo {
     font-size: 70px;
+    color: var(--text-1);
 }
 
 .nav-socials {
