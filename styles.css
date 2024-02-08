@@ -18,11 +18,30 @@ html {
     -webkit-tap-highlight-color: transparent;
     scroll-behavior: smooth;
     font-family: Type;
-    background-color: #ebebeb;
+}
+
+body {
+    background-color: #111111;
 }
 
 :root {
     font-size: 12px;
+
+    /*Modo Claro*/
+    --background-1: #ebebeb;
+    --background-2: var(--text-2);
+    --text-1: #ffffff;
+    --text-2: #222222;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        /*Modo Oscuro*/
+        --text-1: #ffffff;
+        --text-2: #ffffff;
+        --background-1: #111111;
+        --background-2: #262626;
+    }
 }
 
 h1 {
@@ -50,8 +69,8 @@ a {
     text-decoration: none;
 }
 
-a:visited{
-    color: #080808;
+a:visited {
+    color: var(--text-2);
 }
 
 ul {
@@ -89,6 +108,12 @@ figcaption {
     font-size: 1rem;
 }
 
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 @font-face {
     font-family: Logo;
     src: url(Fonts/ButlerStencil-UltraLight.woff);
@@ -101,6 +126,16 @@ figcaption {
     font-display: block;
 }
 
+.block{
+    background-color: #111111;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+
 /*Loading Screen*/
 #Loading-Screen {
     position: fixed;
@@ -108,17 +143,84 @@ figcaption {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #080808;
     color: #ffffff;
+    z-index: 5;
+    opacity: 0;
     pointer-events: none;
-    z-index: 1000;
 }
 
-.counter {
+/* Loader Imágenes */
+
+.loader {
     position: fixed;
-    opacity: 0;
-    left: 50px;
-    bottom: 50px;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.loader .img {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+}
+
+.overlay {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background-2);
+    color: var(--text-1);
+    display: grid;
+    grid-template-columns: 2em 1fr 1fr 2em;
+    grid-template-rows: 6vh 1fr 1fr 6vh;
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+}
+
+.loader-text {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    display: flex;
+    gap: 0.4rem;
+    flex-direction: column;
+}
+
+.loader-info {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+
+.loader-count {
+    grid-column: 3/4;
+    grid-row: 3/4;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.loader-text-container,
+.loader-text-container-2 {
+    margin: 0;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    font-size: 60px;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1;
+}
+
+.col:nth-child(2) .loader-text-container-2 {
+    font-size: 24px;
+    text-align: right;
+    color: gray;
+}
+
+.col:nth-child(2) .loader-text-container-2 span {
+    color: var(--text-1);
+}
+
+/* Counter */
+
+.counter {
     display: flex;
     height: 100px;
     font-size: 100px;
@@ -143,7 +245,9 @@ figcaption {
     right: -10px;
 }
 
+
 /*-----Nav-----*/
+
 .nav-bar {
     position: fixed;
     width: 100vw;
@@ -153,7 +257,8 @@ figcaption {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    color: #080808;
+    background-color: var(--background-1);
+    color: var(--text-2);
     z-index: 3;
     padding: 0em 2em;
 }
@@ -178,7 +283,7 @@ figcaption {
     position: absolute;
     top: 50%;
     transition: all 0.3s;
-    background: #080808;
+    background: var(--text-2);
 }
 
 .menu-btn::before {
@@ -189,19 +294,19 @@ figcaption {
     position: absolute;
     transform: translateY(-6px);
     transition: all 0.3s;
-    background: #080808;
+    background: var(--text-2);
     top: -2px;
 }
 
 .active .menu-btn {
     transform: rotate(45deg);
-    background: #fff;
+    background: #ffffff;
 }
 
 .active .menu-btn::before {
     top: unset;
     transform: rotate(-90deg);
-    background: #fff;
+    background: #ffffff;
 }
 
 .active:hover .menu-btn::before {
@@ -216,10 +321,10 @@ figcaption {
     height: 100vh;
     left: 0;
     top: -101vh;
-    color: #fff;
-    background: #080808;
+    color: #ffffff;
+    background: var(--text-2);
     display: grid;
-    grid-template-rows: 6vh 1fr 6vh;
+    grid-template-rows: 6vh 1fr 40vh 1fr 6vh;
     z-index: 2;
     overflow: hidden;
 }
@@ -229,7 +334,7 @@ figcaption {
 }
 
 .nav-main {
-    grid-row: 2/3;
+    grid-row: 3/4;
     height: 100%;
     width: 100%;
     display: flex;
@@ -258,7 +363,7 @@ figcaption {
 
 .nav-socials a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
     padding: .3em .4em;
 }
@@ -279,7 +384,7 @@ figcaption {
     position: relative;
     top: 60px;
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 4rem;
 }
 
@@ -290,13 +395,13 @@ figcaption {
     left: 0;
     width: 500px;
     height: 5rem;
-    background: #080808;
+    background: var(--text-2);
     margin: 0 auto;
     transition: 1s;
 }
 
 .nav-footer {
-    grid-row: 3/4;
+    grid-row: 5/6;
     width: 100%;
     height: 100%;
     display: flex;
@@ -306,17 +411,11 @@ figcaption {
 
 .nav-footer a {
     text-decoration: none;
-    color: #fff;
+    color: #ffffff;
     font-size: 18px;
 }
 
 @media(max-width: 600px) {
-    .nav-container {
-        width: 100vw;
-        height: 100vh;
-        top: -100vh;
-    }
-
     .nav-main {
         flex-direction: column;
         flex-wrap: nowrap;
@@ -351,7 +450,6 @@ figcaption {
 #Contenido {
     min-height: 180vh;
     width: 100%;
-    opacity: 0;
 }
 
 #Design,
@@ -427,7 +525,7 @@ figcaption {
 }
 
 #content-Photo .text-section,
-#content-About .text-section{
+#content-About .text-section {
     grid-column: 2/3;
     grid-row: 1/2;
     padding: 2rem;
@@ -435,7 +533,7 @@ figcaption {
 
 
 #content-Design .img-section,
-#content-Photo .img-section{
+#content-Photo .img-section {
     grid-column: 2/4;
     grid-row: 2/3;
 }
@@ -490,6 +588,7 @@ figcaption {
 }
 
 @media(max-width: 600px) {
+
     #content-Design,
     #content-Photo,
     #content-Art,
@@ -503,19 +602,19 @@ figcaption {
     }
 
     #content-Design .title-section,
-    #content-Art .title-section,   
+    #content-Art .title-section,
     #content-Photo .title-section {
         padding: .5rem;
     }
 
     #content-About .title-section {
-        padding:.5rem 0.5rem 2rem 0.5rem;
+        padding: .5rem 0.5rem 2rem 0.5rem;
     }
-    
+
     #content-Design .text-section,
-    #content-Art .text-section,    
+    #content-Art .text-section,
     #content-Photo .text-section,
-    #content-About .text-section{
+    #content-About .text-section {
         padding: .5rem;
     }
 
