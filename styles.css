@@ -184,11 +184,13 @@ img {
     display: flex;
     gap: 0.4rem;
     flex-direction: column;
+    user-select: none;
 }
 
 .loader-info {
     grid-column: 3/4;
     grid-row: 2/3;
+    user-select: none;
 }
 
 .loader-count {
@@ -197,6 +199,7 @@ img {
     display: flex;
     align-items: flex-end;
     justify-content: flex-end;
+    user-select: none;
 }
 
 .loader-text-container,
