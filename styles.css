@@ -169,12 +169,12 @@ img {
 .overlay {
     position: fixed;
     width: 100vw;
-    height: 125vh;
+    height: 100vh;
     background: var(--background-2);
     color: var(--text-1);
     display: grid;
     grid-template-columns: 2em 1fr 1fr 2em;
-    grid-template-rows: 6vh 1fr 1fr 6vh 25dvh;
+    grid-template-rows: 6vh 1fr 1fr 6vh;
     clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
 }
 
@@ -251,8 +251,9 @@ img {
 
 @media(max-width: 600px) {
     .overlay {
+        heigth: 125vh,
         grid-template-columns: 2em calc(100vw - 4em) 2em;
-        grid-template-rows: 6vh 1fr 6vh 1fr 6vh;
+        grid-template-rows: 6vh 1fr 6vh 1fr 6vh 25vh;
     }
 
     .loader-text {
