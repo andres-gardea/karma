@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.to(".block", {
             display: "none",
             duration: 0.5,
-            delay: 2
+            delay: 0.5
         })
 
         gsap.to(".loader", 2, {
