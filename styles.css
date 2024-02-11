@@ -253,7 +253,7 @@ img {
     .overlay {
         heigth: 125vh,
         grid-template-columns: 2em calc(100vw - 4em) 2em;
-        grid-template-rows: 6vh 1fr 6vh 1fr 6vh 25vh;
+        grid-template-rows: 6vh 44vh 6vh 44vh 6vh 25vh;
     }
 
     .loader-text {
