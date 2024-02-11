@@ -488,6 +488,7 @@ img {
 #Contenido {
     min-height: 180vh;
     width: 100%;
+    overflow-x: hidden;
 }
 
 #Design,
