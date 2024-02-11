@@ -37,6 +37,11 @@ gsap.to("#Loading-Screen", {
     duration: 1,
 });
 
+        gsap.to(".block", {
+            backgroundColor: "var(--background-2)",
+            delay: 1.5
+        })
+
 gsap.from(".loader-text-container div", {
     duration: 1.5,
     yPercent: 100,
@@ -131,7 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
         gsap.to(".block", {
             display: "none",
             duration: 0.5,
-            delay: 0.5
+            delay: -0.5
         })
 
         gsap.to(".loader", 2, {
