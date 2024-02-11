@@ -133,8 +133,7 @@ img {
     top: 0;
     left: 0;
     width: 100%;
-    min-heigth: 110vh;
-    height: 150dvh;
+    height: 105vh;
     z-index: 4;
 }
 
@@ -170,7 +169,7 @@ img {
 .overlay {
     position: fixed;
     width: 100vw;
-    height: 125dvh;
+    height: 125vh;
     background: var(--background-2);
     color: var(--text-1);
     display: grid;
