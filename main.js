@@ -38,8 +38,9 @@ gsap.to("#Loading-Screen", {
 });
 
         gsap.to(".block", {
-            backgroundColor: "var(--background-2)",
-            delay: 1.5
+            display: "none",
+            duration: 0.5,
+            delay: 3
         })
 
 gsap.from(".loader-text-container div", {
@@ -132,12 +133,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 amount: 1.5,
             },
         });
-        
-        gsap.to(".block", {
-            display: "none",
-            duration: 0.5,
-            delay: -0.5
-        })
 
         gsap.to(".loader", 2, {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
