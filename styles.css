@@ -177,6 +177,8 @@ img {
     grid-template-columns: 2em 1fr 1fr 2em;
     grid-template-rows: 6vh 1fr 1fr 6vh;
     clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
+
+    transition: 0.15s ease-out;
 }
 
 .loader-text {
