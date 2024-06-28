@@ -178,7 +178,7 @@ img {
     clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
 }
 
-.overlay-content{
+.overlay-content {
     width: 100%;
     height: 100%;
     grid-column: 1/2;
@@ -310,6 +310,10 @@ img {
     padding: 0em 2em;
 }
 
+.logo-text {
+    font-size: 1.8rem;
+}
+
 #menu-toggle-btn {
     margin-top: 5px;
     display: flex;
@@ -368,16 +372,11 @@ img {
     height: 100vh;
     left: 0;
     top: -101vh;
-    color: var(--text-2);
     background: var(--background-2);
     display: grid;
     grid-template-rows: 6vh 1fr 40vh 1fr 6vh;
     z-index: 2;
     overflow: hidden;
-}
-
-.logo-text {
-    font-size: 1.8rem;
 }
 
 .nav-main {

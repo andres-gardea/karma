@@ -37,10 +37,10 @@ gsap.to("#Loading-Screen", {
     duration: 1,
 });
 
-        gsap.to(".block", {
-            backgroundColor: "var(--background-2)",
-            delay: 1.5
-        })
+gsap.to(".block", {
+    backgroundColor: "var(--background-2)",
+    delay: 1.5
+})
 
 gsap.from(".loader-text-container div", {
     duration: 1.5,
@@ -107,6 +107,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 amount: 0.5,
             },
         });
+
         gsap.to(
             ".loader-text-container, .loader-text-container-2",
             1.5,
@@ -132,7 +133,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 amount: 1.5,
             },
         });
-        
+
         gsap.to(".block", {
             display: "none",
             duration: 0.5,
@@ -160,7 +161,7 @@ document.addEventListener("DOMContentLoaded", function () {
             ease: "power3.inOut",
             duration: 2,
             delay: 2.1,
-          });
+        });
     });
 });
 
